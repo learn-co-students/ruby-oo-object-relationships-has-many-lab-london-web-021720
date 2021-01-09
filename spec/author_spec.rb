@@ -1,4 +1,5 @@
 require "spec_helper"
+require "pry"
 
 describe "Author" do
 
@@ -37,7 +38,7 @@ describe "Author" do
     describe "#add_post_by_title" do
       it "takes in an argument of a post title, creates a new post with it and associates the post and author" do
         betty.add_post_by_title("My Great Blog Post")
-        # binding.pry
+        #  binding.pry
         expect(betty.posts.last.title).to eq("My Great Blog Post")
         expect(betty.posts.last.author).to eq(betty)
       end
